@@ -1,0 +1,71 @@
+<!-- ĐÂY LÀ FILE KHUNG — Không sửa nội dung trực tiếp ở đây.
+     Nội dung lấy từ site.config.js, các khối {{{ @ten }}} do src/templates.js sinh ra.
+     {{ duong.dan }} = chèn giá trị (đã escape), {{{ @tenRenderer }}} = chèn HTML.
+     Giao diện "Bàn Đặt Lịch": .page chia đôi màn hình — cột trái là .desk (ô đỏ ghim
+     trên máy tính / dải đỏ dính trên cùng ở điện thoại), cột phải là <main> + <footer>.
+     Build sẽ tự xóa comment này. -->
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  {{{ @seoHead }}}
+  <script>document.documentElement.classList.add("js")</script>
+  <!-- Google Fonts: Noto Serif Display (tiêu đề) + Hanken Grotesk (nội dung) — có tiếng Việt, display=swap, không chặn render -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;600&family=Noto+Serif+Display:ital,wght@0,500;1,500&display=swap" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;600&family=Noto+Serif+Display:ital,wght@0,500;1,500&display=swap"></noscript>
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+  <a href="#main" class="skip-link">{{{ @skipLink }}}</a>
+
+  <div class="page">
+    <!-- ═══ BÀN LỄ TÂN: ảnh theo phần đang xem + mục lục + lịch trống ═══ -->
+    {{{ @desk }}}
+
+    <!-- ═══ NỘI DUNG (cột phải) ═══ -->
+    <main id="main" class="folio" tabindex="-1">
+      <!-- Màn hình đầu: ảnh qua mành sáo -->
+      {{{ @heroSection }}}
+
+      <!-- Giới thiệu -->
+      {{{ @aboutSection }}}
+
+      <!-- Sổ khách (cảm nhận) — đặt ngay sau giới thiệu -->
+      {{{ @testimonialsSection }}}
+
+      <!-- Dịch vụ (hàng chọn + khung chi tiết) -->
+      {{{ @servicesSection }}}
+
+      <!-- Thước phim (video) -->
+      {{{ @videosSection }}}
+
+      <!-- Khoảnh khắc (gallery) -->
+      {{{ @gallerySection }}}
+
+      <!-- Đối tác -->
+      {{{ @partnersSection }}}
+
+      <!-- Hỏi đáp (FAQ) -->
+      {{{ @faqSection }}}
+
+      <!-- Đặt lịch (liên hệ + phiếu) -->
+      {{{ @contactSection }}}
+    </main>
+
+    <!-- ═══ CHÂN TRANG ═══ -->
+    {{{ @footerSection }}}
+  </div>
+
+  <!-- ═══ NÚT NỔI (điện thoại) ═══ -->
+  {{{ @floatingButton }}}
+
+  <!-- ═══ HỘP THOẠI ẢNH / VIDEO ═══ -->
+  {{{ @dialogs }}}
+
+  <script src="assets/js/main.js" defer></script>
+</body>
+</html>
