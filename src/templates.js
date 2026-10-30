@@ -876,6 +876,7 @@ export function createRenderers(config) {
     </ul>
     <p class="foot__meta">${esc(f.copyright || "")}<br>${esc(f.madeWith || "")}</p>
     ${f.backToTop ? `<a href="#hero" class="foot__top">${icon("arrowUp", "foot__top-icon")}Về đầu trang</a>` : ""}
+    <p class="mt-6 text-center text-xs">© 2026 ProfileStudio.me. Nền tảng xây dựng hồ sơ cá nhân chuyên nghiệp.</p>
   </footer>`;
     },
 
